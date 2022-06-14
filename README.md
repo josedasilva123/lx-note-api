@@ -63,7 +63,7 @@ Não é necessário um `body`, mas será necessário o envio da token no `header
 ```json
 {
 	"headers": {
-        "auth": "eBJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAyYThkNzNlZmVmNWRjZDQxMjAwYmVmOSIsIm5hbWUiOiJBbGV4IENvbmRlciIsImVtYWlsIjoiYWxleC52LmNvbmRlckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzYxNTIsImV4cCI6MTY1NTI3OTM1Mn0.trsb8P58a6U5aTV7Xjf2x1fRIEHa81X-kEx7p_DEOPE"
+        "auth": "eBJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAyYThkNzNlZmVmNWRjZDQxMjAwYmVmOSIsIm5hbWUiOiJBbGV4IENvbmRlciIsImVtYWlsIjoiYWxleC52LmNvbmRlckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzYxNTIsImV4cCI6MTY1NTI3OTM1Mn0.trsb8P58a6U5aTV7Xjf2x1fRIEHa81X-kEx7p_DEOPE",
     }
 }
 ```
