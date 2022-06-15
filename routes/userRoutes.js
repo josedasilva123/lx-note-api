@@ -53,12 +53,10 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    //Verifica campos do body
     if (!email || !password) {
       throw new Error("Desculpe, algum parâmetro está faltando.");
     }
 
-    //Verifica usuário existente
     const user = await User.findOne({ email: email });
 
     if (!user) {
