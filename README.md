@@ -2,7 +2,7 @@
 
 Uma API para o projeto Lex Note, contendo rotas de usuário (Cadastro, Login e Auto-login) e rotas para cadastro e execlusão de rotas.
 
-URL: 
+URL: `https://lx-note-api.herokuapp.com/`
 
 ### Iniciar localmente
 
