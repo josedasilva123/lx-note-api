@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
 
     if (existingUser) {
       throw new Error(
-        "Desculpe, o e-mail fornecido já pertence a um usuário cadastrado"
+        "Desculpe, o e-mail fornecido já pertence a um usuário cadastrado."
       );
     }
 
