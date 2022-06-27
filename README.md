@@ -173,3 +173,13 @@ Padrão de resposta:
 	"message": "Nota foi excluida com sucesso!"
 }
 ```
+
+### Erros
+
+Padrão de erro para todas as rotas
+
+```
+{
+	"error": "Mensagem de erro..."	
+}
+```
