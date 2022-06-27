@@ -178,7 +178,7 @@ Padrão de resposta:
 
 Padrão de erro para todas as rotas
 
-```
+```json
 {
 	"error": "Mensagem de erro..."	
 }
