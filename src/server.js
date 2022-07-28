@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose");
+
 const cors = require("cors");
 
 const userRoutes = require("./routes/userRoutes");
@@ -8,9 +8,6 @@ const noteRoutes = require("./routes/noteRoutes");
 
 const app = express();
 
-
-//Configuração de variável de ambiente para Heroku
-const port = process.env.PORT || 3030;
 
 app.use(cors());    
 //Métodos para o req.body funcionar
@@ -33,11 +30,4 @@ app.use((req, res, next) => {
 app.use('/user', userRoutes);
 app.use('/notes', noteRoutes);
 
-mongoose.connect(process.env.DATABASE_URL)
-.then(() => {
-    console.log('Conectamos ao MongoDB!')
-    app.listen(port, () => {
-        console.log('[SERVER] API iniciou com sucesso!')
-    });
-})
-.catch((err) => console.log(err))
+module.exports = app;

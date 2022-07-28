@@ -1,17 +1,8 @@
-const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-
-//Middlewares
-const authenticate = require('./middlewares/authenticate');
-
-//Models
 const User = require("../models/User");
 
-const router = express.Router();
-
-//Register
-router.post("/", async (req, res) => {
+async function Register(req, res) {
   try {
     const { name, email, password } = req.body;
 
@@ -27,7 +18,7 @@ router.post("/", async (req, res) => {
       throw new Error(
         "Desculpe, o e-mail fornecido já pertence a um usuário cadastrado."
       );
-    }
+    };
 
     const encryptedPassword = bcrypt.hashSync(password, 1);
 
@@ -46,10 +37,9 @@ router.post("/", async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-});
+};
 
-//Login
-router.post("/login", async (req, res) => {
+async function Login(req, res) {
   try {
     const { email, password } = req.body;
 
@@ -88,16 +78,19 @@ router.post("/login", async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-});
+};
 
-//Autologin
-router.post("/autologin", authenticate, async (req, res) => {
+async function AutoLogin(req, res) {
     const user = req.body.user;
     
     //Retorna o user vindo do middleware
     if(user){
       res.status(200).json({ user: user });
     }   
-});
+}
 
-module.exports = router;
+module.exports = {
+    Register,
+    Login,
+    AutoLogin,
+}

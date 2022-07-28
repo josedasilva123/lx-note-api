@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index",
-    "server": "nodemon index"
+    "test": "jest --detectOpenHandles",
+    "start": "node src/index",
+    "server": "nodemon src/index"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,6 @@
     "mongodb": "^4.7.0",
     "mongoose": "^6.3.6",
     "nodemon": "^2.0.16"
-  }
+  },
+  "devDependencies": {}
 }
