@@ -56,9 +56,9 @@ Padrão de resposta:
 }
 ```
 
-### POST /user/autologin (Autologin)
+### GET /user/autologin (Autologin)
 
-Não é necessário um `body`, mas será necessário o envio da token no `headers`
+Será necessário o envio da token no `headers`
 
 ```json
 //Este token é somente um exemplo
@@ -102,7 +102,7 @@ Padrão de resposta:
 
 ```json
 {
-	"response": [
+	"notes": [
 		{
 			"_id": "62a9c3ceb4b3d666df8ea985",
 			"userID": "62h8d73dfef5dcd41a01bef9",
@@ -150,7 +150,7 @@ Padrão de resposta:
 ```json
 {
 	"message": "Nota criada com sucesso!",
-	"response": {
+	"user": {
 		"userID": "63ad7aefefadcd41200bef9",
 		"title": "Título da nota",
 		"text": "Texto da nota",

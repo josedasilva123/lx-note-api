@@ -44,6 +44,6 @@ export default class NotesServices{
             throw new Error('Ainda não há nenhuma nota cadastrada.');
         }
         
-        return { response };
+        return { notes: response };
     }
 }

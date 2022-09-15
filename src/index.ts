@@ -2,6 +2,7 @@
 import server from "./server"
 
 import mongoose from "mongoose";
+import { MongoMemoryServer } from "mongodb-memory-server";
 
 const port = process.env.PORT || 3030;
 
