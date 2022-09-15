@@ -19,4 +19,4 @@ const noteSchema = new Schema<iNote>({
 
 const Note = model<iNote>("Note", noteSchema, 'notes')
 
-module.exports = Note;
+export default Note;
