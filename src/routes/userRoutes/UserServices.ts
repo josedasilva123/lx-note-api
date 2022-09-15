@@ -18,14 +18,10 @@ export default class UserServices {
 
     const encryptedPassword = bcrypt.hashSync(password, 1);
 
-    const date = new Date();
-
     const user = {
       name,
       email,
       password: encryptedPassword,
-      createdAt: date,
-      updatedAt: date,
     };
 
     await User.create(user);
