@@ -3,11 +3,10 @@ import express from "express";
 import cors from "cors";
 dotenv.config();
 
-const userRoutes = require("./routes/userRoutes");
-const noteRoutes = require("./routes/noteRoutes");
+import userRoutes from "./routes/userRoutes/user.routes";
+import noteRoutes from "./routes/noteRoutes/note.routes"
 
 const app = express();
-
 
 app.use(cors());    
 //Métodos para o req.body funcionar
