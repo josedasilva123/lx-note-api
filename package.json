@@ -2,7 +2,7 @@
   "name": "lx-note-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app/index.js",
   "engines": {
     "node": "16.x"
   },
