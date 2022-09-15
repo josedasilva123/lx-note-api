@@ -1,7 +1,7 @@
-require("dotenv").config();
-const express = require("express");
-
-const cors = require("cors");
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+dotenv.config();
 
 const userRoutes = require("./routes/userRoutes");
 const noteRoutes = require("./routes/noteRoutes");
@@ -30,4 +30,4 @@ app.use((req, res, next) => {
 app.use('/user', userRoutes);
 app.use('/notes', noteRoutes);
 
-module.exports = app;
+export default app;
