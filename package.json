@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "vercel deploy --prod",
+    "build": "npx tsc",
     "start": "node src/index",
-    "server": "nodemon"
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
