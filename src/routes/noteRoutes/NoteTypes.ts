@@ -6,5 +6,5 @@ export interface iCreateBody extends iAuthenticateBody{
 }
 
 export interface iDeleteParams{
-    noteId: string;
+    noteId?: string;
 }
