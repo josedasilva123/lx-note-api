@@ -7,12 +7,12 @@ const UserControllers = require("../../controllers/userControllers");
 const router = express.Router();
 
 //Register
-router.post("/", Validate, userRegisterValidation() ,UserControllers.Register);
+router.post("/", Validate, userRegisterValidation() , UserControllers.Register);
 
 //Login
 router.post("/login", Validate, userLoginValidation() ,UserControllers.Login);
 
 //Autologin
-router.post("/autologin", Authenticate, UserControllers.AutoLogin);
+router.get("/autologin", Authenticate, UserControllers.AutoLogin);
 
 export default router;
